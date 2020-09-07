@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import NavBar from "./components/navbar";
+import Hero from "./components/hero";
+import "mailgo/dist/mailgo.min.js";
+import ImageCallout from "./components/image-callout";
+import About from "./partials/About";
+import JuicerFeed from "./components/juicer";
+import SojoMap from "./components/map";
+import Footer from "./components/footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <Hero />
+      <About />
+      <ImageCallout heading="Design" />
+      <ImageCallout alignImage="left" heading="Manufacture" />
+      <ImageCallout heading="Installation" />
+      <JuicerFeed />
+      <SojoMap />
+      <Footer />
     </div>
   );
 }
