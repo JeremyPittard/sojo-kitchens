@@ -16,7 +16,7 @@ const ImageCallout = (props) => {
   let alignImage = (i +1)  % 2 === 0 ? "flex-row-reverse" : "";
 
     return (
-      <section className={`image-callout py-5`} key={service.id}>
+      <section className={`image-callout py-5 my-5`} key={service.id}>
         <Container>
           <Row className={`h-100 ${alignImage}`}>
             <Col sm={12} md={7} className="my-auto">
