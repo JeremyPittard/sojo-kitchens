@@ -1,0 +1,35 @@
+
+$white: #ffffff;
+$blue-dark: #272643;
+$calypso: #2c698d;
+$powder-blue: #bae8e8;
+$iceberg: #e3f6f5;
+$primary: $calypso;
+$secondary: $white;
+$body-color: $iceberg;
+$body-bg: $calypso;
+$light: $white;
+$dark: $blue-dark;
+$link-color: $calypso;
+
+@import "~bootstrap/scss/bootstrap";
+@import './styles/juicer.scss';
+@import './styles/map.scss';
+
+
+
+.btn.btn-primary.btn-lg {
+    color: $white;
+}
+
+.navbar-brand {
+  font-family: "Kreon", serif;
+  font-weight: 633 !important;
+  color: $blue-dark;
+}
+
+
+
+h1.referral {
+  display: none !important;
+}

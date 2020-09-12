@@ -1,0 +1,28 @@
+.carousel {
+  position: relative;
+  h2 {
+    color: $white;
+  }
+  p {
+    color: $white;
+  }
+
+  &:after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $blue-dark;
+    opacity: 0.5;
+  }
+
+  img {
+    @media (max-width: 767px) {
+      min-height: 700px;
+      width: auto !important;
+      left: -50%;
+    }
+  }
+}

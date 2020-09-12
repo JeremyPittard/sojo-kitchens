@@ -1,0 +1,9 @@
+body {
+    padding-top: 56px;
+  
+    @include media-breakpoint-up(md) {
+      padding-top: 80px;
+    }
+  }
+  
+  

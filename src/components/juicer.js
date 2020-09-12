@@ -15,7 +15,7 @@ const JuicerFeed = () => {
 
   return (
     <>
-      <Container>
+      <Container className='py-5'>
         <ul
           className="juicer-feed"
           data-feed-id="398840626962300"

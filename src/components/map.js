@@ -7,7 +7,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const SojoMap = () => {
   const position = [-31.932, 115.8413];
   return (
-    <Container className='p-3'>
+    <Container className='pt-3'>
       <Row>
           <Col></Col>
         <Col>

@@ -1,26 +1,51 @@
 import React from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
+import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-const Hero = () => {
+import { Container, Row, Col } from "react-bootstrap";
+import GraphImg from "graphcms-image";
+
+
+const Hero = (props) => {
+
+  const imageURL = props.image;
+  const mobileImageURL = props.imageSmall
+  const title = props.title;
+  const subtitle = props.subtitle;
+  const buttonText = props.buttonText;
   return (
-    <Jumbotron> 
-      <Container>
-        <Row>
-          <Col className="text-center">
-            <h1 className="sr-only">Sojo Kitchen's, Perth Western Australia</h1>
-            <h2 className="text-center h1">
-              Sojo Kitchens
-            </h2>
-            <p role="doc-subtitle" className='h3 text-center'>The Kitchen of tomorrow, Today!</p>
-            <Button href='mailto:test@email.com'>Tell 'em what to do next</Button>
-            👇
-          </Col>
-        </Row>
-      </Container>
-    </Jumbotron>
+    <Carousel controls={false} indicators={false}>
+      <Carousel.Item>
+        <picture className="d-block w-100">
+          <source media="(min-width:768px)" srcSet={imageURL} />
+          <source
+            media="(max-width:767px)"
+            srcSet={mobileImageURL}
+          />
+          <img
+            src={imageURL}
+            alt="hero"
+            className="d-block w-100"
+          />
+        </picture>
+        <Carousel.Caption className="h-100">
+          <Container className="h-100 text-center">
+            <Row className="h-100 text-center">
+            <Col xs={12} className="h-100 d-flex text-center">
+            <div className="my-auto mx-auto">
+              <p role="doc-subtitle" className="h3 text-center w-100">
+                {subtitle}
+              </p>
+              <h2 className="text-center display-1">{title}</h2>
+              <Button href="mailto:test@email.com" className='mt-3' size={'lg'}>
+                  {buttonText}
+              </Button>
+            </div>
+            </Col>
+            </Row>
+          </Container>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 };
 

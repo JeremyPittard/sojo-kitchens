@@ -1,9 +1,1 @@
-$primary: red;
-// $body-bg: #000;
-// $body-color: #111;
-@import "~bootstrap/scss/bootstrap";
-@import './styles/juicer.scss';
-@import './styles/map.scss';
-h1.referral {
-  display: none !important;
-}
+@import './styles/main';

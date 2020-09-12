@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Kreon:wght@633&family=Ubuntu&display=swap");
+
+@mixin heading-font($color:$powder-blue) {
+  font-family: "Kreon", serif;
+  font-weight: 633 !important;
+  color: $color;
+}
+
+@mixin body-font($color:$iceberg) {
+  font-family: "Ubuntu", sans-serif;
+  color:$color;
+}
+
+:root {
+  font-size:18px;
+}
+
+body {
+    @include body-font;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    @include heading-font($powder-blue);
+}
+
+.statement {
+    font-size: 270px;
+    line-height: 78%;
+    word-break: break-all;
+    color: $powder-blue;
+}
+
