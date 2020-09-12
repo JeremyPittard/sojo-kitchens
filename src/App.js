@@ -50,6 +50,9 @@ function App() {
             id
             name
             description
+            image {
+              url
+            }
           }
         }
       `;
