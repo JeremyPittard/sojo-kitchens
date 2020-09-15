@@ -13,23 +13,41 @@ import Col from "react-bootstrap/Col";
 
 const ImageCallout = (props) => {
   return props.callOuts.map((service, i) => {
-  let alignImage = (i +1)  % 2 === 0 ? "flex-row-reverse" : "";
+    let alignImage = (i + 1) % 2 === 0 ? "left" : "right";
 
-    return (
-      <section className={`image-callout py-5 my-5`} key={service.id}>
-        <Container>
-          <Row className={`h-100 ${alignImage}`}>
-            <Col sm={12} md={7} className="my-auto">
-              <h3>{service.name}</h3>
-              <p>{service.description}</p>
-            </Col>
-            <Col xs={12} md={5}>
-              <Image src={service.image.url} />
-            </Col>
-          </Row>
-        </Container>
-      </section>
-    );
+    if (alignImage === "left") {
+      return (
+        <section className={`image-callout py-5 my-5`} key={service.id}>
+          <Container>
+            <Row className={`h-100`}>
+              <Col sm={12} md={6} className="my-auto">
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+              </Col>
+              <Col xs={12} md={{ span: 5, offset: 1 }}>
+                <Image src={service.image.url} />
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      );
+    } else {
+      return (
+        <section className={`image-callout py-5 my-5`} key={service.id}>
+          <Container>
+            <Row className={`h-100`}>
+              <Col sm={12} md={5} className="my-auto">
+                <Image src={service.image.url} />
+              </Col>
+              <Col xs={12} md={{ span: 6, offset: 1 }}>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      );
+    }
   });
 };
 

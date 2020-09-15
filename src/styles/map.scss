@@ -1,3 +1,17 @@
 .leaflet-container {
     height: 500px;
 }
+
+.sojo-map {
+    a {
+        transition: all 250ms linear;
+        display: inline-block;
+
+        &:hover, &:focus {
+            transform: translateY(-5px);
+            svg {
+                fill: $blue-dark;
+            }
+        }
+    }
+}

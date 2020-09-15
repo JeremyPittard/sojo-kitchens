@@ -36,7 +36,7 @@ function App() {
               url(transformation:{image:{resize:{width:1920, height:1080}}})
             }
             smallScreen: image {
-              url(transformation:{image:{resize:{height:700, fit:crop}}})
+              url(transformation:{image:{resize:{height:700, fit:max}}})
             }
             buttonText
           }
@@ -52,6 +52,17 @@ function App() {
             description
             image {
               url
+            }
+          }
+          settings: settingsx(first: 1){
+            fbUrl
+            instagramUrl
+            linkedInUrl
+            phoneNumber
+            email
+            location {
+              latitude
+              longitude
             }
           }
         }
@@ -73,9 +84,11 @@ function App() {
         <NavBar />
         <Hero title={content.heroImages[0].headline} subtitle={content.heroImages[0].subHeading} image={content.heroImages[0].largeScreen.url} imageSmall={content.heroImages[0].smallScreen.url} buttonText={content.heroImages[0].buttonText} />
         <About content={content.aboutSections[0].content.html} />
+        <div id="services">
         <ImageCallout callOuts={content.services} />
+        </div>
         <JuicerFeed />
-        <SojoMap />
+        <SojoMap details={content.settings[0]}/>
         <Footer />
       </div>
     );
