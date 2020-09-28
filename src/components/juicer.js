@@ -18,8 +18,8 @@ const JuicerFeed = () => {
       <Container id="portfolio" className='py-5 my-5'>
         <ul
           className="juicer-feed"
-          data-feed-id="398840626962300"
-          data-per="3"
+          data-feed-id="360916881173648"
+          data-per="12"
           data-columns="3"
           data-truncate="75"
         ></ul>
@@ -29,3 +29,4 @@ const JuicerFeed = () => {
 };
 
 export default JuicerFeed;
+
