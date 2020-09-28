@@ -10,7 +10,7 @@ const About = (props) => {
       <section className="about d-flex align-items-center">
         <Container id="about" className="py-5">
           <Row className="align-items-center">
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className="mb-5 mb-md-0 breakout">
               <SOJO />
             </Col>
             <Col

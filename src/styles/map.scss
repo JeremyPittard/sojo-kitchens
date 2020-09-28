@@ -10,8 +10,14 @@
         &:hover, &:focus {
             transform: translateY(-5px);
             svg {
-                fill: $blue-dark;
+                fill: $white;
             }
+        }
+    }
+
+    svg {
+        path {
+            stroke: $grey;
         }
     }
 }

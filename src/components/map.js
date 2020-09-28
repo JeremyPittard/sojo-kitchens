@@ -29,7 +29,7 @@ const SojoMap = (props) => {
     <Container className="py-3 sojo-map">
       <Row className="h-100">
         <Col className="my-auto" xs={12} md={4}>
-          <div className="my-auto text-left">
+          <div className="my-auto text-left ">
             <h3 className='mb-4' >Find Us On</h3>
             <IconContext.Provider value={{ color: iconColor, size: "2.5em" }}>
               {details.fbUrl != null && (
@@ -64,7 +64,7 @@ const SojoMap = (props) => {
             </IconContext.Provider>
           </div>
         </Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} md={8} className="mt-5 mt-md-0">
           <Map center={position} zoom={15}>
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

@@ -1,16 +1,14 @@
 
 $white: #ffffff;
-$blue-dark: #272643;
-$calypso: #2c698d;
-$powder-blue: #bae8e8;
-$iceberg: #e3f6f5;
-$primary: $calypso;
+$black: #080808;
+$grey: #d2d2d2;
+$primary: $black;
 $secondary: $white;
-$body-color: $iceberg;
-$body-bg: $calypso;
+$body-color: $white;
+$body-bg: $black;
 $light: $white;
-$dark: $blue-dark;
-$link-color: $calypso;
+$dark: $white;
+$link-color: $black;
 
 @import "~bootstrap/scss/bootstrap";
 @import './styles/juicer.scss';
@@ -25,7 +23,7 @@ $link-color: $calypso;
 .navbar-brand {
   font-family: "Kreon", serif;
   font-weight: 633 !important;
-  color: $blue-dark;
+  color: $white;
 }
 
 
