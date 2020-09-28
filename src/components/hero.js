@@ -1,10 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
 
+import { TimelineMax } from "gsap";
+
+
 
 const Hero = (props) => {
+
+  useEffect(() => {
+    const tl = new TimelineMax();
+
+    tl.fromTo("#title", 1, { opacity: 0 }, { opacity: 1 });
+    tl.fromTo("#subtitle", 0.35, { y: -5, opacity: 0 }, { y: 0, opacity: 1 }, "+=0.15");
+    tl.fromTo("#hero-cta", 0.35, { y: -5, opacity: 0 }, { y: 0, opacity: 1 }, "+=0.15");
+  }, [])
+
 
   const imageURL = props.image;
   const mobileImageURL = props.imageSmall
@@ -31,11 +43,11 @@ const Hero = (props) => {
             <Row className="h-100 text-center">
             <Col xs={12} className="h-100 d-flex text-center">
             <div className="my-auto mx-auto">
-              <p role="doc-subtitle" className="h3 text-center w-100">
+              <p role="doc-subtitle" id="subtitle" className="h3 text-center w-100">
                 {subtitle}
               </p>
-              <h2 className="text-center display-1">{title}</h2>
-              <Button href="mailto:test@email.com" className='mt-3' size={'lg'}>
+              <h2 className="text-center display-1" id='title' >{title}</h2>
+              <Button href="mailto:test@email.com" className='mt-3' id='hero-cta' size={'lg'}>
                   {buttonText}
               </Button>
             </div>

@@ -17,7 +17,7 @@ const Footer = () => {
           <Col sm={12} md={4} className="text-right">
             <p>
               made by{" "}
-              <a href={myLink} target="_blank">
+              <a href={myLink} target="_blank" rel="noopener noreferrer">
                 this guy.
               </a>{" "}
             </p>
