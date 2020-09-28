@@ -15,13 +15,13 @@ const Hero = (props) => {
     <Carousel controls={false} indicators={false}>
       <Carousel.Item>
         <picture className="d-block w-100">
-          <source media="(min-width:768px)" srcSet={`https://ik.imagekit.io/6illphohzg/sojo/${imageURL}/tr:n-hero_d	`} />
+          <source media="(min-width:768px)" srcSet={`https://ik.imagekit.io/jeixqp7rmu/sojo/${imageURL}/tr:n-hero_d	`} />
           <source
             media="(max-width:767px)"
-            srcSet={`https://ik.imagekit.io/6illphohzg/sojo/${mobileImageURL}/tr:n-mobile_hero`}
+            srcSet={`https://ik.imagekit.io/jeixqp7rmu/sojo/${mobileImageURL}/tr:n-mobile_hero`}
           />
           <img
-            src={`https://ik.imagekit.io/6illphohzg/sojo/${imageURL}/tr:n-hero_d	`}
+            src={`https://ik.imagekit.io/jeixqp7rmu/sojo/${imageURL}/tr:n-hero_d	`}
             alt="hero"
             className="d-block w-100"
           />
