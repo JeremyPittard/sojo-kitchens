@@ -25,4 +25,17 @@
       left: -50%;
     }
   }
+
+  .display-1 {
+    @media (max-width:1024px) {
+      font-size: 4rem !important;
+    }
+  }
+
+  .btn-lg {
+    @media (max-width:1024px) {
+      font-size:1rem !important;
+    }
+
+  }
 }
