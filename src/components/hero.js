@@ -11,10 +11,13 @@ const Hero = (props) => {
 
   useEffect(() => {
     const tl = new TimelineMax();
+    tl.set("#title", {opacity: 0})
+    tl.set("#subtitle", {opacity: 0, y:-5})
+    tl.set("#hero-cta", {opacity: 0, y:-5})
 
-    tl.fromTo("#title", 1, { opacity: 0 }, { opacity: 1 });
-    tl.fromTo("#subtitle", 0.35, { y: -5, opacity: 0 }, { y: 0, opacity: 1 }, "+=0.15");
-    tl.fromTo("#hero-cta", 0.35, { y: -5, opacity: 0 }, { y: 0, opacity: 1 }, "+=0.15");
+    tl.to("#title", { opacity: 1, duration:0.5 })
+    .to("#subtitle", { y: 0, opacity: 1,duration:0.5 })
+    .to("#hero-cta", { y: 0, opacity: 1, duration:0.5 });
   }, [])
 
 
