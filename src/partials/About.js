@@ -14,9 +14,9 @@ const About = (props) => {
 
   useEffect(() => {
     const tl = new TimelineMax();
-    setTimeout(() =>{
-      tl.fromTo(".about-content", { y: 250, opacity: 0 }, {opacity: 1, y: 0, duration:0.35 , scrollTrigger: { trigger: ".breakout", start: "top center"}});
-    }, 1000)
+    tl.set('.about-content', {y:50, autoAlpha:0})
+    debugger;
+    tl.to(".about-content", {autoAlpha: 1, y: 0, duration: 0.3, scrollTrigger: { trigger: ".breakout", start: "top center"}});
 
   }, [])
 
